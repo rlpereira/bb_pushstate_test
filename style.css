@@ -1,0 +1,110 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.header .container {
+	margin: 0 auto;
+	width: 1160px;
+	padding: 0 20px;
+}
+
+.header .container h1 {
+	display: block;
+	color: #FFFFFF;
+	background-color: #008500;
+}
+
+.header .container ul {
+	list-style: none;
+	display: block;
+	text-align: center;
+	background-color: #A60000;
+}
+
+.header .container ul li {
+	display: inline-block;
+	width: 240px;
+	height: 60px;
+	padding: 15px 30px;
+	text-align: center;
+	font-size: 48px;
+	color: #FFFFFF;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1180px;
+	min-height: 100px;
+	padding: 0 10px;
+}
+
+.container .menu {
+
+}
+
+.container .postloop {
+	margin-top: 20px;
+}
+
+.container .postloop .post {
+	margin-bottom: 30px;
+	border-top: 2px dotted #8560a8;
+}
+
+.container .postloop .post h1 {
+	color: #3cb878;
+	font-size: 36px;
+}
+
+.container .postloop .post p {
+	color: #999;
+	font-size: 24px;
+}
+
+.container .postloop .post:first-child {
+	border-top: none;
+}
+
+.footer {
+	width: 100%;
+	/*height: auto;*/
+	overflow: auto;
+	display: block;
+	background-color: #EDEDED;
+}
+
+.footer .container {
+	margin: 0 auto;
+	width: 1160px;
+	padding: 0 20px;
+}
+
+.footer .container h2 {
+	float: left;
+	max-width: 600px;
+	padding-top: 20px;
+}
+
+.footer .container ul {
+	float: right;
+	padding-top: 20px;
+	list-style: none;
+	max-height: 400px;
+	width: 200px;
+	font-size: 36px;
+}
+
+.footer .container ul li {
+	display: block;
+	width: 100%;
+	min-height: 20px;
+	border-bottom: 2px dotted blue;
+	font-size: 24px;
+}
