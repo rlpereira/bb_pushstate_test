@@ -9,10 +9,13 @@ window.cl = function() {
 var App = function() {}
 
 App.prototype = {
+	/**
+	**	init method, just start the Backbone history with the pushState turned ON.
+	**	also passing the default path to change the url.
+	**
+	*/
 	initialize: function() {
-		cl('App initialized!');
-		Backbone.history.start({ silent: true, pushState: true, root: '/bb_pushstate_test/' });
-		this.populateDataUrlPosts();
+		Backbone.history.start({ silent: true, pushState: true, root: '/bb_pushstate_test/' });		
 	},
 
 	populateDataUrlPosts: function () {
@@ -26,12 +29,17 @@ App.prototype = {
 				url = item['data_url'];
 
 				$('#' + id).attr('data-url', self.replaceSpaces(titleEl.innerHTML));
-
-				$('#' + id).waypoint(function(direction) {
-					var url = $(this).attr('data-url');
-					Backbone.history.navigate(url, true);
-				});
+				self.bindPoints(id);
 		})
+	},
+
+	bindPoints: function (pointId) {
+		var pointId = '#' + pointId;
+
+		$(pointId).waypoint(function(direction) {
+			var url = $(this).attr('data-url');
+			Backbone.history.navigate(url, true);
+		});
 	},
 
 	replaceSpaces: function (str) {
@@ -58,4 +66,5 @@ App.prototype = {
 window.onload = function () {
 	var app = new App();
 	app.initialize();
+	app.populateDataUrlPosts();
 }
